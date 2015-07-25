@@ -1,3 +1,8 @@
+import org.junit.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 public class FizzBuzzParserShould {
 
     /**
@@ -13,5 +18,10 @@ public class FizzBuzzParserShould {
      * 3 -> 1\nFizz\nBuzz
      * 6 -> 1\nFizz\nBuzz\nFizz\n5\nFizzBuzz
      */
+
+    @Test
+    public void not_parse_the_input_number() {
+        assertThat(FizzBuzzParser.parse(1), is("1"));
+    }
 
 }
