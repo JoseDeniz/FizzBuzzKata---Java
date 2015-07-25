@@ -13,7 +13,6 @@ public class FizzBuzzParserShould {
      *
      * Examples:
      *
-     * 3 -> 1\nFizz\nBuzz
      * 6 -> 1\nFizz\nBuzz\nFizz\n5\nFizzBuzz
      */
 
@@ -25,6 +24,11 @@ public class FizzBuzzParserShould {
     @Test
     public void parse_the_number_divisible_by_two_to_fizz() {
         assertThat(FizzBuzzParser.parse(2), is("1\nFizz"));
+    }
+
+    @Test
+    public void parse_the_number_divisible_by_three_to_buzz() {
+        assertThat(FizzBuzzParser.parse(3), is("1\nFizz\nBuzz"));
     }
 
 }
