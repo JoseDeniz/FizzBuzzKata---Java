@@ -10,6 +10,7 @@ public class FizzBuzzParser {
     }
 
     private static String parseNumber(int number) {
+        if (number % 2 == 0 && number % 3 == 0) return "FizzBuzz";
         if (number % 2 == 0) return "Fizz";
         if (number % 3 == 0) return "Buzz";
         return String.valueOf(number);
