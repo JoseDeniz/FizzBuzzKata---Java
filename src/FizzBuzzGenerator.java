@@ -3,13 +3,13 @@ import java.util.stream.IntStream;
 import static java.lang.String.valueOf;
 import static java.util.stream.Collectors.joining;
 
-public class FizzBuzzParser {
+public class FizzBuzzGenerator {
 
     private static final String EMPTY = "";
 
-    public static String parse(int input) {
-        return IntStream.rangeClosed(1, input)
-                        .mapToObj(FizzBuzzParser::parseNumber)
+    public static String generateFizzBuzzSequenceUpTo(int limit) {
+        return IntStream.rangeClosed(1, limit)
+                        .mapToObj(FizzBuzzGenerator::parseNumber)
                         .collect(joining(","));
     }
 
